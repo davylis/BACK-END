@@ -1,7 +1,8 @@
 Back-End Programming (2024)
 
-//Terminology:
-
+//Good to know:
+-? in always used in web traffic to start list of parameters. 
+-& Can have one, none or "unlimited" amount of params.
 
 //Lecture 1:
 "Frond-End vs Back-End"
@@ -43,9 +44,14 @@ etc.
 -It have functions that you can call
 -For example C++ (stdio.h)
 
+
+"Creating file in VS with SpringBoot
+
+
 //Q for V
 -CRUD
 -Frameworks
 -jar/war(one file etc.) standalone
 -initializing in VSCODE
+
 
