@@ -1,0 +1,20 @@
+<!DOCTYPE HTML> 
+
+<html xmlns:th="http://www.thymeleaf.org"> 
+    
+<head> 
+    <title>Server Programming with Spring Boot</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+</head> 
+
+<body> 
+    <table>
+    <tr th:each="onecar : ${carlist}">
+        <td th:text="${onecar.brand}">Brand...</td>
+        <td th:text="${onecar.year}">Year...</td>
+    </tr>
+    </table>
+
+</body> 
+
+</html>
