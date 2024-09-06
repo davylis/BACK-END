@@ -1,5 +1,6 @@
 package fi.haagahelia.course.web;
 
+import org.apache.el.stream.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,6 +37,16 @@ public class StudentController {
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String deleteStudent(@PathVariable("id") Long studentId, Model model) {
     	repository.deleteById(studentId);
+        return "redirect:../studentlist";
+    }     
+    @RequestMapping(value = "/modify/{id}", method = RequestMethod.GET)
+    public String updateStudent(@PathVariable("id") Long studentId, Model model) {
+        //Student student = new Student();
+        //Optional<Student> student = repository.findById(studentId);
+        Student student = (Student)model.getAttribute("student")
+        //Student nonOptionalStudent = student.get();
+    	//student.setId(studentId);
+        repository.save(student);
         return "redirect:../studentlist";
     }     
 }
